@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  actions:
+    image: uanid/github-actions-agent:latest
+    environment:
+      REPO_URL: <your-github-repository-url>
+      AGENT_TOKEN: <your-github-actions-agent-token>
+
+#An example docker compose file
