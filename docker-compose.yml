@@ -5,5 +5,7 @@ services:
     environment:
       REPO_URL: <your-github-repository-url>
       AGENT_TOKEN: <your-github-actions-agent-token>
+      RUN_DOCKER_DAEMON: "true"
+    privileged: true
 
 #An example docker compose file

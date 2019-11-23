@@ -23,6 +23,10 @@ else
   fi
 fi
 
+if [ -n "$RUN_DOCKER_DAEMON" ]; then
+  service docker start
+fi
+
 bash ./config.sh --url "$repo_url" --token "$agent_token"
 
 bash ./run.sh
