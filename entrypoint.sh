@@ -2,6 +2,11 @@
 set -e
 
 if [ -e "isInstalled" ]; then
+
+  if [ -n "$RUN_DOCKER_DAEMON" ]; then
+    service docker start
+  fi
+
   bash ./run.sh
 else
   if [ $# -eq 2 ]; then
